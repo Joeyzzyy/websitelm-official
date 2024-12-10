@@ -102,12 +102,6 @@ export const Footer = () => {
           </a>
           <span className="hidden sm:inline">|</span>
           <p>{text.copyright}</p>
-          <span className="hidden sm:inline">|</span>
-          <p>{text.icp}</p>
-          <span className="hidden sm:inline">|</span>
-          <a href="" className="hover:text-gray-200">
-            {text.cac}
-          </a>
         </div>
       </div>
     </footer>
