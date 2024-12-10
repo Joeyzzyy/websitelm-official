@@ -84,14 +84,14 @@ export const Navigation = ({ theme = 'light' }) => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow">
       <div className="max-w-[1450px] mx-auto px-6">
-        {/* 主导航�� */}
+        {/* 主导航 */}
         <div className="flex justify-between h-[4.2rem]">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center">
               <Image
-                src="/images/kreado-logo.webp"
-                alt="Kreado Logo"
+                src=""
+                alt="WebsiteLM Logo"
                 width={110}
                 height={53}
                 className="h-9 w-auto"
@@ -156,7 +156,7 @@ export const Navigation = ({ theme = 'light' }) => {
                                         // Features 的原有内容
                                         <>
                                             <Image
-                                                src="/images/kreado-header-menu.webp"
+                                                src=""
                                                 width={240}
                                                 height={135}
                                                 alt="Latest Updates"
@@ -301,10 +301,10 @@ export const Navigation = ({ theme = 'light' }) => {
             </div>
           </div>
 
-          {/* 右侧链接 */}
+          {/* ���侧链接 */}
           <div className="hidden md:flex items-center space-x-6">
             <Link
-              href="https://www.kreadoai.com/ai/workbench"
+              href=""
               className={`text-base transition duration-300 ${
                 hasScrolled || activeDropdown 
                   ? themeStyles.light.text + ' ' + themeStyles.light.hoverText
@@ -403,7 +403,7 @@ export const Navigation = ({ theme = 'light' }) => {
                           {item.key === 'features' && (
                             <div className="mb-4">
                               <Image
-                                src="/images/kreado-header-menu.webp"
+                                src=""
                                 width={160}
                                 height={90}
                                 alt="Latest Updates"

@@ -27,8 +27,8 @@ export const Footer = () => {
           <div className="flex flex-col sm:flex-row items-center sm:space-x-4 space-y-2 sm:space-y-0">
             <Link href="/" className="flex items-center">
               <Image
-                src="/images/kreado-logo.webp"
-                alt="Kreado Logo"
+                src=""
+                alt="WebsiteLM Logo"
                 width={110}
                 height={53}
                 className="h-9 w-auto"
@@ -43,7 +43,7 @@ export const Footer = () => {
           
           <div className="flex justify-center space-x-6">
             <a 
-              href="https://www.youtube.com/@kreadoai" 
+              href="" 
               className="text-gray-400 hover:text-gray-200"
               target="_blank"
               rel="noopener noreferrer"
@@ -52,7 +52,7 @@ export const Footer = () => {
               <FaYoutube className="h-5 w-5" />
             </a>
             <a 
-              href="https://x.com/kreadoai2023" 
+              href="" 
               className="text-gray-400 hover:text-gray-200"
               target="_blank"
               rel="noopener noreferrer"
@@ -61,7 +61,7 @@ export const Footer = () => {
               <FaXTwitter className="h-5 w-5" />
             </a>
             <a 
-              href="https://www.facebook.com/kreadoai" 
+              href="" 
               className="text-gray-400 hover:text-gray-200"
               target="_blank"
               rel="noopener noreferrer"
@@ -70,7 +70,7 @@ export const Footer = () => {
               <FaFacebook className="h-5 w-5" />
             </a>
             <a 
-              href="https://discord.com/invite/d9uu5STTwp" 
+              href="" 
               className="text-gray-400 hover:text-gray-200"
               target="_blank"
               rel="noopener noreferrer"
@@ -82,22 +82,22 @@ export const Footer = () => {
         </div>
 
         <div className="flex flex-wrap justify-center items-center gap-2 text-sm text-gray-400">
-          <a href="mailto:support@kreadoai.com" className="hover:text-gray-200">
+          <a href="" className="hover:text-gray-200">
             {text.links.email}
           </a>
           <span className="hidden sm:inline">|</span>
           <a 
-            href={`https://help.kreadoai.com/${currentLang === 'zh' ? 'zh-CN' : 'en'}/`} 
+            href="" 
             className="hover:text-gray-200"
           >
             {text.links.helpCenter}
           </a>
           <span className="hidden sm:inline">|</span>
-          <a href="https://www.kreadoai.com/terms-of-service" className="hover:text-gray-200">
+          <a href="" className="hover:text-gray-200">
             {text.links.serviceTerms}
           </a>
           <span className="hidden sm:inline">|</span>
-          <a href="https://www.kreadoai.com/privacy-policy" className="hover:text-gray-200">
+          <a href="" className="hover:text-gray-200">
             {text.links.privacyPolicy}
           </a>
           <span className="hidden sm:inline">|</span>
@@ -105,7 +105,7 @@ export const Footer = () => {
           <span className="hidden sm:inline">|</span>
           <p>{text.icp}</p>
           <span className="hidden sm:inline">|</span>
-          <a href="https://beian.cac.gov.cn/#/index" className="hover:text-gray-200">
+          <a href="" className="hover:text-gray-200">
             {text.cac}
           </a>
         </div>
