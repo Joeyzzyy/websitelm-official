@@ -2,8 +2,8 @@
 export const dynamic = 'force-static';
 
 export const metadata = {
-  title: 'KreadoAI - AI Creation Generates Multilingual Videos',
-  description: 'AI Creation Generates Multilingual Videos',
+  title: 'WebsiteLM - The Best SEO Page Generator for Modern Era',
+  description: 'The Best SEO Page Generator for Modern Era',
 };
 
 // 导入客户端主页组件

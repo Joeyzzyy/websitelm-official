@@ -10,27 +10,27 @@ export const dynamic = 'force-static'
 // 如果需要的话，也可以添加这个配置来处理不同的域名
 export const dynamicParams = true
 
-// 保持原有的 KREADO_METADATA 配置
-const KREADO_METADATA = {
-  title: 'KreadoAI',
-  defaultDescription: 'AI Creation Generates Multilingual Videos',
+// 保持原有的 WEBSITELM_METADATA 配置
+const WEBSITELM_METADATA = {
+  title: 'WebsiteLM',
+  defaultDescription: 'The Best SEO Page Generator for Modern Era',
   icons: {
     icon: [
       { 
-        url: '/icons/kreado-logo.ico',
+        url: '',
         sizes: 'any',
         type: 'image/x-icon'
       }
     ],
     shortcut: [
       {
-        url: '/icons/kreado-logo.ico',
+        url: '',
         type: 'image/x-icon'
       }
     ],
     apple: [
       {
-        url: '/icons/kreado-logo.ico',
+        url: '',
         type: 'image/x-icon'
       }
     ]
@@ -153,7 +153,7 @@ export async function generateMetadata({ params: paramsPromise }) {
     }
 
     const article = articleData.data[0];
-    const authorConfig = KREADO_METADATA;
+    const authorConfig = WEBSITELM_METADATA;
     
     return {
       title: `${article.title} | ${authorConfig.title}`,  // Optimized title format
