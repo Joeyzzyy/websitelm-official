@@ -135,7 +135,7 @@ const KeyResultsWithTextBlock = ({ data }) => {
                     <li key={`toc-${index}`}>
                       <button
                         onClick={() => scrollToSection(`section-${index}`)}
-                        className="text-gray-600 hover:text-blue-600 text-sm text-left"
+                        className="text-gray-600 hover:text-[#3374FF] text-sm text-left"
                       >
                         {content.contentTitle}
                       </button>
@@ -154,7 +154,7 @@ const KeyResultsWithTextBlock = ({ data }) => {
                     .filter(result => result.display)
                     .map((result, index) => (
                       <div key={index} className="mb-8 last:mb-0">
-                        <div className="text-6xl font-bold mb-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                        <div className="text-6xl font-bold mb-2 text-[#3374FF]">
                           {result.percentage}%
                         </div>
                         <p className="text-sm text-gray-600">
@@ -178,7 +178,7 @@ const KeyResultsWithTextBlock = ({ data }) => {
                           <a 
                             key={i}
                             href={part.href}
-                            className="text-blue-500 hover:text-blue-700 hover:underline font-bold"
+                            className="text-[#3374FF] hover:text-[#3374FF]/80 font-bold"
                             target="_blank"
                             rel="noopener noreferrer"
                           >
@@ -195,7 +195,7 @@ const KeyResultsWithTextBlock = ({ data }) => {
                           <a 
                             key={i}
                             href={part.href}
-                            className="text-blue-500 hover:text-blue-700 hover:underline font-bold"
+                            className="text-[#3374FF] hover:text-[#3374FF]/80 font-bold"
                             target="_blank"
                             rel="noopener noreferrer"
                           >

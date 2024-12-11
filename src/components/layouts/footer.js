@@ -20,36 +20,36 @@ export const Footer = () => {
   const text = footerText[currentLang];
 
   return (
-    <footer className="bg-[#262B3A]">
+    <footer className="bg-black">
       <div className="max-w-7xl mx-auto py-8 md:py-12 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-6 space-y-4 md:space-y-0">
           <div className="flex flex-col sm:flex-row items-center sm:space-x-4 space-y-2 sm:space-y-0">
-            <p className="text-gray-300 text-base text-center sm:text-left">
+            <p className="text-white text-base text-center sm:text-left">
               {text.slogan}
             </p>
           </div>
           
           <div className="flex justify-center space-x-6">
-            <span className="text-gray-400 hover:text-gray-200 cursor-pointer">
+            <span className="text-white hover:text-gray-200 cursor-pointer">
               <span className="sr-only">YouTube</span>
               <FaYoutube className="h-5 w-5" />
             </span>
-            <span className="text-gray-400 hover:text-gray-200 cursor-pointer">
+            <span className="text-white hover:text-gray-200 cursor-pointer">
               <span className="sr-only">X (Twitter)</span>
               <FaXTwitter className="h-5 w-5" />
             </span>
-            <span className="text-gray-400 hover:text-gray-200 cursor-pointer">
+            <span className="text-white hover:text-gray-200 cursor-pointer">
               <span className="sr-only">Facebook</span>
               <FaFacebook className="h-5 w-5" />
             </span>
-            <span className="text-gray-400 hover:text-gray-200 cursor-pointer">
+            <span className="text-white hover:text-gray-200 cursor-pointer">
               <span className="sr-only">Discord</span>
               <FaDiscord className="h-5 w-5" />
             </span>
           </div>
         </div>
 
-        <div className="flex flex-wrap justify-center items-center gap-2 text-sm text-gray-400">
+        <div className="flex flex-wrap justify-center items-center gap-2 text-sm text-white">
           <span className="hover:text-gray-200 cursor-pointer">
             {text.links.email}
           </span>
@@ -66,7 +66,7 @@ export const Footer = () => {
             {text.links.privacyPolicy}
           </span>
           <span className="hidden sm:inline">|</span>
-          <p>{text.copyright}</p>
+          <p className="text-white">{text.copyright}</p>
         </div>
       </div>
     </footer>
