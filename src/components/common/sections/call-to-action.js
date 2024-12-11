@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import CustomButton from './widget-custom_button';
-import fontStyles from '../../../styles/textStyles';
+import fontStyles from '../../../styles/fontStyles';
 import buttonLinks from '../../ui/button/links';
 
 const CallToAction = ({ data }) => {
@@ -10,7 +10,7 @@ const CallToAction = ({ data }) => {
   };
 
   return (
-    <div className="bg-gray-50 py-12 md:py-16">
+    <div className="bg-white py-12 md:py-16">
       <div className="max-w-3xl mx-auto px-4 text-center">
         <h2 className={`${fontStyles.h2.fontSize} ${fontStyles.h2.fontWeight} ${fontStyles.h2.color} mb-4`}>
           {data.title}

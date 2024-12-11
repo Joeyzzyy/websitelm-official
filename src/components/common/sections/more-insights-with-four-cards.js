@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import fontStyles from '../../../styles/textStyles';
+import fontStyles from '../../../styles/fontStyles';
 
 const MoreInsightsWithFourCards = ({ data }) => {
   const insights = data.bottomContent;

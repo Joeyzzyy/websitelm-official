@@ -2,7 +2,7 @@
 import React, { useState, useRef } from 'react';
 import CustomButton from './widget-custom_button';
 import buttonLinks from '../../ui/button/links';
-import fontStyles from '../../../styles/textStyles';
+import fontStyles from '../../../styles/fontStyles';
 
 const HeroSectionWithVideo = ({ data }) => {
   console.log('data', data);
@@ -46,7 +46,7 @@ const HeroSectionWithVideo = ({ data }) => {
           </div>
         </div>
 
-        <div className="relative w-full max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12 mb-12 md:mb-16">
+        <div className="relative w-full max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12 mb-12">
           <div className="flex justify-center">
             <div className="w-full md:max-w-[800px] max-w-[580px] relative">
               <button

@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import CustomButton from './widget-custom_button';
-import fontStyles from '../../../styles/textStyles';
+import fontStyles from '../../../styles/fontStyles';
 import buttonLinks from '../../ui/button/links';
 
 const WhyChooseUsWithTwoHugeBlocks = ({ data, author }) => {
@@ -53,7 +53,7 @@ const WhyChooseUsWithTwoHugeBlocks = ({ data, author }) => {
               <img 
                 src={content.imageUrl}
                 alt={content.imageAlt}
-                className="w-full h-full object-cover rounded-lg border border-gray-100"
+                className="w-full h-full object-cover rounded-lg border border-gray-100 max-h-[300px]"
               />
             </div>
           </div>

@@ -2,10 +2,10 @@
 
 import React from 'react';
 import CustomButton from './widget-custom_button';
-import fontStyles from '../../../styles/textStyles';
+import fontStyles from '../../../styles/fontStyles';
 import buttonLinks from '../../ui/button/links';
 
-const ProductBenefitsWithATable = ({ data, author }) => {
+const ProductBenefitsWithATable = ({ data }) => {
   const getButtonLink = () => {
     return buttonLinks.workbench || '#';
   };
@@ -54,7 +54,6 @@ const ProductBenefitsWithATable = ({ data, author }) => {
               {data.rightContent.subtitle}
             </p>
             <CustomButton 
-              variant={author} 
               href={getButtonLink()}
               className="inline-flex items-center px-6 h-10 border-2 border-[#3374FF] text-[#3374FF] hover:bg-[#3374FF] hover:text-white text-sm font-medium rounded-md transition-colors duration-200"
             >

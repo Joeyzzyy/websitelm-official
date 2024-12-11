@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import fontStyles from '../../../styles/textStyles';
+import fontStyles from '../../../styles/fontStyles';
 
 const TitleSectionWithImage = ({ data, author }) => {
   const containsChinese = (text) => {
@@ -18,7 +18,7 @@ const TitleSectionWithImage = ({ data, author }) => {
   const dateLabel = isChineseTitle ? '发布日期' : 'PUBLISHED ON';
 
   return (
-    <div className="relative z-10 py-16 md:py-20 flex items-center bg-white">
+    <div className="relative z-10 py-12 md:py-16 flex items-center bg-white">
       <header className="w-full">
         <div className="w-full max-w-6xl mx-auto px-4">
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center">

@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import fontStyles from '../../../styles/textStyles';
+import fontStyles from '../../../styles/fontStyles';
 
 const KeyResultsWithThreeCards = ({ data }) => {
   const title = data.title;
@@ -15,7 +15,7 @@ const KeyResultsWithThreeCards = ({ data }) => {
   return (
     <div className="bg-white py-12 md:py-16">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className={`${fontStyles.h2.fontSize} ${fontStyles.h2.fontWeight} ${fontStyles.h2.color} text-center`}>
+        <h2 className={`${fontStyles.h2.fontSize} ${fontStyles.h2.fontWeight} ${fontStyles.h2.color} text-center mb-16`}>
           {title}
         </h2>
 

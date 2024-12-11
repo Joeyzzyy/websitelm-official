@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import CustomButton from './widget-custom_button';
-import fontStyles from '../../../styles/textStyles';
+import fontStyles from '../../../styles/fontStyles';
 import buttonLinks from '../../ui/button/links';
 
 const HowItWorksWithWorkflow = ({ data, author }) => {

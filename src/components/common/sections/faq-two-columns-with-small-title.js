@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import fontStyles from '../../../styles/textStyles';
+import fontStyles from '../../../styles/fontStyles';
 
 const FAQTwoColumnsWithSmallTitle = ({ data }) => {
   const [openIndex, setOpenIndex] = useState(null);

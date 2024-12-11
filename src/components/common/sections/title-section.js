@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import fontStyles from '../../../styles/textStyles';
+import fontStyles from '../../../styles/fontStyles';
 
 const TitleSection = ({ data, author }) => {
   return (

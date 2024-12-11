@@ -2,7 +2,7 @@
 import React from 'react';
 import buttonLinks from '../../ui/button/links';
 import CustomButton from './widget-custom_button';
-import fontStyles from '../../../styles/textStyles';
+import fontStyles from '../../../styles/fontStyles';
 
 const PricingWithThreeCards = ({ data, author }) => {
   const { title, bottomContent } = data;

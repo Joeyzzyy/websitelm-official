@@ -3,7 +3,7 @@
 import React from 'react';
 import buttonLinks from '../../ui/button/links';
 import CustomButton from './widget-custom_button';
-import fontStyles from '../../../styles/textStyles';
+import fontStyles from '../../../styles/fontStyles';
 
 const HowItWorksWithThreeBlocks = ({ data, author }) => {
   const { leftContent, rightContent } = data;

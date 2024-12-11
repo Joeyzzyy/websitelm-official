@@ -9,7 +9,7 @@ import {
   IoCheckmarkCircle,  // 带圆圈的绿色对勾
   IoCloseCircle       // 带圆圈的红色叉号
 } from "react-icons/io5";
-import fontStyles from '../../../styles/textStyles';
+import fontStyles from '../../../styles/fontStyles';
 import PropTypes from 'prop-types';
 
 // 创建一个图标映射对象

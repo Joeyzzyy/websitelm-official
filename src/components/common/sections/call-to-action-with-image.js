@@ -2,7 +2,7 @@
 import React from 'react';
 import CustomButton from './widget-custom_button';
 import buttonLinks from '../../ui/button/links';
-import fontStyles from '../../../styles/textStyles';
+import fontStyles from '../../../styles/fontStyles';
 import Image from 'next/image';
 
 const CallToActionWithImage = ({ data }) => {

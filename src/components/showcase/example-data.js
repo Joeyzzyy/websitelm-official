@@ -55,7 +55,6 @@ export const exampleData = {
       recommendedPosition: 'Upper section, after title',
       filePath: 'src/components/common_components/product-benefits-with-four-blocks.js',
       props: {
-        author: 'websitelm',
         leftContent: {
           title: 'Smart Video Creation Platform',
           description: 'Make video creation easier and marketing more efficient',
@@ -131,7 +130,6 @@ export const exampleData = {
       recommendedPosition: 'Upper-mid section, after benefits introduction',
       filePath: 'src/components/common_components/why-choose-us-with-six-small-blocks.js',
       props: {
-        author: 'websitelm',
         topContent: {
           emoji: '🚀',
           title: 'Why Choose websitelm AI',
@@ -179,7 +177,6 @@ export const exampleData = {
       recommendedPosition: 'Mid section, after feature blocks',
       filePath: 'src/components/common_components/why-choose-us-with-two-huge-blocks.js',
       props: {
-        author: 'websitelm',
         topContent: {
           title: 'Transform Your Video Marketing',
           subTitle: 'Create engaging videos in minutes with AI'
@@ -240,7 +237,6 @@ export const exampleData = {
       recommendedPosition: 'Mid section, after workflow',
       filePath: 'src/components/common_components/how-it-works-with-three-blocks.js',
       props: {
-        author: 'websitelm',
         leftContent: {
           icon: '🚀',
           title: 'How Our AI Works',
@@ -274,7 +270,6 @@ export const exampleData = {
       recommendedPosition: 'Mid-lower section, before pricing',
       filePath: 'src/components/common_components/product_comparison_table.js',
       props: {
-        author: 'websitelm',
         topContent: {
           title: 'Why Choose websitelm AI',
           subTitle: 'Compare our features with traditional solutions',
@@ -322,6 +317,7 @@ export const exampleData = {
       recommendedPosition: 'Mid-lower section, after product comparison',
       filePath: 'src/components/common_components/user-reviews.js',
       props: {
+        title: 'See What Our Customers Say',
         bottomContent: [
           {
             name: "Sarah Chen",
@@ -363,6 +359,7 @@ export const exampleData = {
       recommendedPosition: 'Mid-lower section, after product features',
       filePath: 'src/components/common_components/user-reviews-moving-cards.js',
       props: {
+        title: 'See What Our Customers Say',
         bottomContent: [
           {
             name: "David Miller",
@@ -415,6 +412,7 @@ export const exampleData = {
       recommendedPosition: 'Mid-lower section, alternative to standard reviews',
       filePath: 'src/components/common_components/user-reviews-square-cards.js',
       props: {
+        title: 'See What Our Customers Say',
         bottomContent: [
           {
             name: "Jennifer Lee",
