@@ -46,7 +46,7 @@ const HeroSectionWithVideo = ({ data }) => {
           </div>
         </div>
 
-        <div className="relative w-full max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12 mb-12">
+        <div className="relative w-full max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12">
           <div className="flex justify-center">
             <div className="w-full md:max-w-[800px] max-w-[580px] relative">
               <button
