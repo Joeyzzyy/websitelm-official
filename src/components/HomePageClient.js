@@ -17,6 +17,8 @@ import UserReviewsWithMovingCards from './common/sections/user-reviews-with-movi
 import UserReviewsWithSquareCards from './common/sections/user-reviews-with-square-cards';
 import CallToAction from './common/sections/call-to-action';
 import PricingWithThreeCards from './common/sections/pricing-with-three-cards';
+import HeroSectionWithMutipleTexts from './common/sections/hero-section-with-mutiple-texts';
+
 
 const defaultData = {
   HeroSectionWithVideo: {
@@ -546,6 +548,7 @@ export default function HomePageClient({ initialData }) {
 
   return (
     <main className="flex-grow">
+      <HeroSectionWithMutipleTexts data={mockData.HeroSectionWithMutipleTexts} />
       <HeroSectionWithVideo data={mockData.HeroSectionWithVideo} />
       <WhyChooseUsWithTwoHugeBlocks data={mockData.WhyChooseUsWithTwoHugeBlocks} />
       <WhyChooseUsWithSixSmallBlocks data={mockData.WhyChooseUsWithSixSmallBlocks} />
