@@ -58,7 +58,7 @@ const PricingWithThreeCards = ({ data, author }) => {
           variant={author} 
           href={getButtonLink()}
           className={`
-            inline-flex items-center px-6 h-10 
+            inline-flex items-center justify-center px-6 h-10 
             ${isHighlighted 
               ? 'bg-[#3374FF] text-white hover:bg-[#3374FF]/90' 
               : 'border-2 border-[#3374FF] text-[#3374FF] hover:bg-[#3374FF] hover:text-white'

@@ -16,6 +16,7 @@ import UserReviews from './common/sections/user-reviews';
 import UserReviewsWithMovingCards from './common/sections/user-reviews-with-moving-cards';
 import UserReviewsWithSquareCards from './common/sections/user-reviews-with-square-cards';
 import CallToAction from './common/sections/call-to-action';
+import PricingWithThreeCards from './common/sections/pricing-with-three-cards';
 
 const defaultData = {
   HeroSectionWithVideo: {
@@ -479,6 +480,53 @@ const defaultData = {
       }
     ]
   },
+
+  PricingWithThreeCards: {
+    bottomContent: {
+      planOne: {
+        name: 'Basic',
+        price: '$29',
+        discount: 'SAVE 20%',
+        buttonText: 'Start Basic',
+        features: [
+          '5 AI video generations/month',
+          'Basic templates',
+          '720p video quality',
+          '10 languages support',
+          'Email support'
+        ]
+      },
+      planTwo: {
+        name: 'Professional',
+        price: '$79',
+        discount: 'MOST POPULAR',
+        buttonText: 'Start Pro',
+        features: [
+          '20 AI video generations/month',
+          'Premium templates',
+          '1080p video quality',
+          '25 languages support',
+          'Priority support',
+          'Custom branding'
+        ]
+      },
+      planThree: {
+        name: 'Enterprise',
+        price: 'Custom',
+        discount: 'BEST VALUE',
+        buttonText: 'Contact Sales',
+        features: [
+          'Unlimited video generations',
+          'Custom templates',
+          '4K video quality',
+          'All languages support',
+          '24/7 dedicated support',
+          'API access',
+          'Custom integration'
+        ]
+      }
+    }
+  },
   
   CallToAction: {
     author: 'websitelm',
@@ -513,7 +561,8 @@ export default function HomePageClient({ initialData }) {
       <UserReviews data={mockData.UserReviews} />
       <UserReviewsWithMovingCards data={mockData.UserReviewsWithMovingCards} />
       <UserReviewsWithSquareCards data={mockData.UserReviewsWithSquareCards} />
-      <CallToAction data={mockData.CallToAction} />
+      <PricingWithThreeCards data={mockData.PricingWithThreeCards} />
+      <CallToAction data={mockData.CallToAction} /> 
     </main>
   );
 }
