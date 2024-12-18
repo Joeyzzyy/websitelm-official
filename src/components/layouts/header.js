@@ -7,6 +7,26 @@ import { menuItems } from '@/locales/headerText';
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   
+  const handleRedirect = (e) => {
+    e.preventDefault();
+    window.location.href = 'https://app.websitelm.com';
+  };
+
+  const handleScroll = (sectionId, e) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const headerHeight = 67; // 4.2rem 约等于 67px
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   const mainMenuItems = [
     { key: 'features', label: 'Features' },
     { key: 'solutions', label: 'Solutions' },
@@ -46,8 +66,9 @@ export const Header = () => {
               {mainMenuItems.map((item) => (
                 <Link
                   key={item.key}
-                  href={`/${item.key}`}
+                  href={`#${item.key}`}
                   className="text-[15px] font-medium hover:text-[#3374FF] transition-all duration-300 flex items-center"
+                  onClick={(e) => handleScroll(item.key, e)}
                 >
                   {item.label}
                 </Link>
@@ -59,18 +80,21 @@ export const Header = () => {
               <Link
                 href="/login"
                 className="text-[15px] font-medium hover:text-[#3374FF] transition-all duration-300"
+                onClick={handleRedirect}
               >
                 Login
               </Link>
               <Link
                 href="/book-demo"
                 className="text-[15px] font-medium hover:text-[#3374FF] transition-all duration-300"
+                onClick={(e) => e.preventDefault()}
               >
                 Book a Demo
               </Link>
               <Link
                 href="/get-started"
                 className="text-[15px] font-medium text-white bg-[#3374FF] hover:bg-[#3374FF]/90 px-4 py-2 rounded-lg transition-all duration-300"
+                onClick={handleRedirect}
               >
                 Get Started
               </Link>
@@ -96,6 +120,71 @@ export const Header = () => {
             </button>
           </div>
         </div>
+
+        {/* 添加移动端菜单 */}
+        {isOpen && (
+          <div className="md:hidden absolute top-[4.2rem] left-0 right-0 bg-white border-t border-gray-100 shadow-lg">
+            <div className="max-w-[1450px] mx-auto">
+              <div className="py-4 px-6">
+                {/* 主菜单项 */}
+                <div className="space-y-3">
+                  {mainMenuItems.map((item) => (
+                    <Link
+                      key={item.key}
+                      href={`#${item.key}`}
+                      className="flex items-center text-gray-600 hover:text-[#3374FF] transition-all duration-300"
+                      onClick={(e) => {
+                        handleScroll(item.key, e);
+                        setIsOpen(false);
+                      }}
+                    >
+                      <span className="text-[15px] font-medium">{item.label}</span>
+                    </Link>
+                  ))}
+                </div>
+                
+                {/* 分割线 */}
+                <div className="my-4 border-t border-gray-100"></div>
+                
+                {/* 操作按钮区域 */}
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-4">
+                    <Link
+                      href="/login"
+                      className="text-[15px] font-medium text-gray-600 hover:text-[#3374FF] transition-all duration-300"
+                      onClick={(e) => {
+                        handleRedirect(e);
+                        setIsOpen(false);
+                      }}
+                    >
+                      Login
+                    </Link>
+                    <Link
+                      href="/book-demo"
+                      className="text-[15px] font-medium text-gray-600 hover:text-[#3374FF] transition-all duration-300"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setIsOpen(false);
+                      }}
+                    >
+                      Book a Demo
+                    </Link>
+                  </div>
+                  <Link
+                    href="/get-started"
+                    className="inline-flex items-center justify-center text-[15px] font-medium text-white bg-[#3374FF] hover:bg-[#3374FF]/90 px-5 py-2.5 rounded-lg transition-all duration-300"
+                    onClick={(e) => {
+                      handleRedirect(e);
+                      setIsOpen(false);
+                    }}
+                  >
+                    Get Started
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );

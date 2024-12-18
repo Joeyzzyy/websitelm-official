@@ -8,12 +8,12 @@ const WhyChooseUsWithSixSmallBlocks = ({ data }) => {
   const { emoji, title, subtitle } = topContent;
 
   return (
-    <div className="bg-white py-12 md:py-16">
+    <div className="bg-white py-16 md:py-24">
       <div className="max-w-6xl mx-auto px-4">
         {/* 顶部内容 */}
-        <div className="text-center mb-12 md:mb-16">
-          <div className="text-5xl md:text-6xl mb-6">{emoji}</div>
-          <h2 className={`${fontStyles.h2.fontSize} ${fontStyles.h2.fontWeight} ${fontStyles.h2.color} mb-4`}>
+        <div className="text-center mb-16 md:mb-20">
+          <div className="text-6xl md:text-7xl mb-8 animate-bounce-slow">{emoji}</div>
+          <h2 className={`${fontStyles.h2.fontSize} ${fontStyles.h2.fontWeight} ${fontStyles.h2.color} mb-6`}>
             {title}
           </h2>
           <p className={`${fontStyles.subtitle.fontSize} ${fontStyles.subtitle.color} max-w-3xl mx-auto`}>
@@ -22,23 +22,26 @@ const WhyChooseUsWithSixSmallBlocks = ({ data }) => {
         </div>
 
         {/* 底部卡片网格 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {bottomContent.map((module, index) => (
             <div 
               key={index} 
-              className="flex gap-4 p-6 rounded-lg border border-gray-100 hover:border-[#3374FF]/20 hover:shadow-sm transition-all duration-200"
+              className="group flex flex-col items-center text-center p-8 rounded-xl border-2 border-gray-100 
+                hover:border-[#3374FF]/30 hover:shadow-lg transition-all duration-300 
+                transform hover:-translate-y-1"
             >
-              <div className="text-[#3374FF] text-2xl">
+              <div className="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
                 {module.icon}
               </div>
-              <div>
-                <h3 className={`${fontStyles.h3.fontSize} ${fontStyles.h3.fontWeight} ${fontStyles.h3.color} mb-2`}>
-                  {module.title}
-                </h3>
+              <h3 className={`${fontStyles.h3.fontSize} ${fontStyles.h3.fontWeight} ${fontStyles.h3.color} 
+                mb-4 text-xl md:text-2xl`}>
+                {module.title}
+              </h3>
+              {module.content && (
                 <p className={`${fontStyles.paragraph.fontSize} ${fontStyles.paragraph.color}`}>
                   {module.content}
                 </p>
-              </div>
+              )}
             </div>
           ))}
         </div>

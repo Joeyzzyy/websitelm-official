@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import fontStyles from '../../../styles/fontStyles';
+import FAQAnswer from '../components/FAQAnswer';
 
 const FAQTwoColumnsWithSmallTitle = ({ data }) => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -43,12 +44,12 @@ const FAQTwoColumnsWithSmallTitle = ({ data }) => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                <div className={`overflow-hidden transition-all duration-200 ${
-                  openIndex === index ? 'max-h-96 pb-4' : 'max-h-0'
+                <div className={`overflow-y-auto transition-all duration-200 ${
+                  openIndex === index ? 'max-h-[600px] pb-4' : 'max-h-0'
                 }`}>
-                  <p className={`${fontStyles.paragraph.fontSize} ${fontStyles.paragraph.color}`}>
-                    {faq.answer}
-                  </p>
+                  <div className={`${fontStyles.paragraph.fontSize} ${fontStyles.paragraph.color}`}>
+                    <FAQAnswer answer={faq.answer} />
+                  </div>
                 </div>
               </div>
             ))}

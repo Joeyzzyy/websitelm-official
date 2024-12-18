@@ -9,7 +9,7 @@ import TitleSection from '../common/sections/title-section';
 import TitleSectionWithImage from '../common/sections/title-section-with-image';
 import PricingWithThreeCards from '../common/sections/pricing-with-three-cards';
 import HowItWorksWithWorkflow from '../common/sections/how-it-works-with-workflow';
-import WhyChooseUsWithSixBlocks from '../common/sections/why-choose-us-with-six-small-blocks';
+import WhyChooseUsWithSixBlocks from '../common/sections/why-choose-us-with-small-blocks';
 import CallToAction from '../common/sections/call-to-action';
 import CallToActionWithImage from '../common/sections/call-to-action-with-image';
 import HowItWorksWithThreeBlocks from '../common/sections/how-it-works-with-three-blocks';

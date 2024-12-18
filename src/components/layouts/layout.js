@@ -3,7 +3,7 @@ import HeroSectionWithVideo from '../common/sections/hero-section-with-video';
 import CallToAction from '../common/sections/call-to-action';
 import HowItWorksWithThreeBlocks from '../common/sections/how-it-works-with-three-blocks';
 import WhyChooseUsWithTwoHugeBlocks from '../common/sections/why-choose-us-with-huge-blocks';
-import WhyChooseUsWithSixSmallBlocks from '../common/sections/why-choose-us-with-six-small-blocks';
+import WhyChooseUsWithSixSmallBlocks from '../common/sections/why-choose-us-with-small-blocks';
 import HowItWorksWithWorkflow from '../common/sections/how-it-works-with-workflow';
 import ProductBenefitsWithFourBlocks from '../common/sections/product-benefits-with-blocks';
 import Faqs from '../common/sections/faqs';
@@ -73,7 +73,7 @@ const generateSchemaMarkup = (article) => {
   };
 };
 
-const KreadoaiLayout = ({ article, keywords }) => {
+const Layout = ({ article, keywords }) => {
   const title = article?.title || 'Default Title';
   const description = article?.description || 'Default description';
 
@@ -111,4 +111,4 @@ const KreadoaiLayout = ({ article, keywords }) => {
   );
 };
 
-export default KreadoaiLayout;
+export default Layout;

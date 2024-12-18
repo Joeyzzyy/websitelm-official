@@ -2,7 +2,7 @@
 
 import HeroSectionWithMultipleTexts from './common/sections/hero-section-with-mutiple-texts';
 import WhyChooseUsWithHugeBlocks from './common/sections/why-choose-us-with-huge-blocks';
-import WhyChooseUsWithSixSmallBlocks from './common/sections/why-choose-us-with-six-small-blocks';
+import WhyChooseUsWithSmallBlocks from './common/sections/why-choose-us-with-small-blocks';
 import HowItWorksWithWorkflow from './common/sections/how-it-works-with-workflow';
 import ProductBenefitsWithBlocks from './common/sections/product-benefits-with-blocks';
 import FAQTwoColumnsWithSmallTitle from './common/sections/faq-two-columns-with-small-title';
@@ -15,31 +15,32 @@ const defaultData = {
     topContent: {
         buttonText: 'Book a Demo',
         ctaButtonText: 'Get Started',
+        ctaButtonText: 'Get Started',
         title: 'AI-crafted Content That Delivers Results.',
         description: 'Dominate search results and drive more traffic with AI-generated landing pages and blog posts that are optimized for your audience and search engines.',
     }
   },
-  WhyChooseUsWithSixSmallBlocks: {
+  WhyChooseUsWithSmallBlocks: {
     topContent: {
-      emoji: '🚀',
+      emoji: '🏆',
       title: 'Trusted by Thousands of Businesses Worldwide',
       subTitle: 'Join a growing community of entrepreneurs, marketers, and businesses who use WebsiteLM to supercharge their online presence.'
     },
     bottomContent: [
       {
-        icon: '🎯',
+        icon: '📈',
         title: '10,000+ websites built with WebsiteLM.',
-        content: '...'
+        content: ''
       },
       {
-        icon: '🌍',
-        title: 'Featured in: Toolify, TheresAnAIForThat, and Product Hunt.',
-        content: '...'
+        icon: '🌟',
+        title: 'Featured in over 10 well-known websites.',
+        content: ''
       },
       {
-        icon: '⚡',
-        title: 'Rated 4.8/5 on leading review platforms( like G2 and Trustpilot).',
-        content: '...'
+        icon: '⭐',
+        title: 'Rated 4.8/5 on leading review platforms.',
+        content: ''
       },
     ]
   },
@@ -72,7 +73,7 @@ const defaultData = {
         },
         {
           title: 'Keyword and Page Planning',
-          content: 'Analyze keyword gaps between a user’s website and competitors. Based on this analysis, it plans new page creation or optimization strategies, recommending content themes like product introductions, industry news, and customer stories.',
+          content: 'Analyze keyword gaps between a user’s website and competitors. Based on this analysis, it plans new page creation or optimization strategies, recommending content themes like Product Introductions, Product Features, Industry Insights, Customer Success Stories, Case Studies, Comparison Pages, FAQs, Guide & Tutorials and Testimonials & Reviews.',
           buttonText: 'Learn More',
           imageUrl: '/images/abstract.png',
           imageAlt: 'Abstract image',
@@ -105,19 +106,19 @@ const defaultData = {
         number: 'Step 1',
         title: 'Analyze and Plan Your Website',
         subTitle: 'Input Your Website & Competitor Links',
-        content: 'Start by inputting your website URL and those of your competitors. Our AI will analyze your website’s content, structure, SEO performance, and user experience. It will identify gaps, opportunities, and potential areas for improvement, helping you understand where your website stands in comparison to your competition.'
+        content: 'Start by entering your website URL along with those of your competitors. Our AI will analyze content, structure, SEO performance, and user experience to uncover gaps and opportunities. By comparing your site with competitors, we’ll highlight your unique advantages, helping your customers better understand what sets you apart.'
       },
       {
         number: 'Step 2',
         title: 'Build & Optimize Content',
         subTitle: 'Generate SEO-Optimized Content',
-        content: 'Using advanced AI algorithms and your site\'s unique data, WebsiteLM will generate high-quality, SEO-friendly content for landing pages, blog posts, and knowledge base articles. The AI will personalize content based on your audience and industry, ensuring relevance and engagement. You can fine-tune the content through manual adjustments to match your brand\'s tone and style.'
+        content: 'Using advanced AI algorithms and your site’s unique data, WebsiteLM will generate high-quality, SEO-friendly content for landing pages, blog posts, and knowledge base articles. The AI personalizes content based on your audience and industry, ensuring relevance and engagement. You can refine the content manually to ensure accuracy, validate critical data, and align with key performance metrics.'
       },
       {
         number: 'Step 3',
         title: 'Publish & Monitor',
         subTitle: 'Launch & Optimize for Results',
-        content: 'Once your content is ready, WebsiteLM will automatically publish it to your website. Our platform provides continuous monitoring of the content\' SEO performance, allowing you to make data-driven optimizations over time. Track key metrics, run A/B tests, and gather user feedback to enhance your website’s effectiveness and drive more conversions.'
+        content: 'Once your content is ready, you can easily publish it to your website with WebsiteLM, as we provide seamless hosting to simplify the process. Our platform continuously monitors the content\'s SEO performance, enabling data-driven optimizations over time. Analyze page performance metrics and use these insights to refine future publishing strategies, enhancing your website\'s effectiveness.'
       }
     ]
   },
@@ -156,19 +157,13 @@ const defaultData = {
           icon: '📈',
           title: 'Scalable and Flexible',
           subTitle: 'Adaptable to Your Needs',
-          content: 'WebsiteLM scales as your business grows. Whether you\'re managing a small blog or a large corporate website, our platform adapts to your needs, offering features like A/B testing, multi-language support, and social media integration to reach a broader audience.'
+          content: 'WebsiteLM scales as your business grows. Whether you\'re managing a small blog or a large corporate website, our platform adapts to your needs, offering features like multi-language support and intelligent internal linking to enhance content discoverability and help you reach a broader audience.'
         },
         {
           icon: '💰',
           title: 'Seamless Content Integration',
           subTitle: 'Easy Publishing and Updates',
           content: 'Create, publish, and update content effortlessly. WebsiteLM automates the publishing process, ensuring that your website stays up-to-date with fresh, relevant content that ranks higher and attracts more traffic.'
-        },
-        {
-          icon: '🖥️',
-          title: 'Enhanced User Experience',
-          subTitle: 'Intuitive Platform with User-Friendly Interface',
-          content: 'WebsiteLM is designed with ease of use in mind. The platform’s intuitive interface and streamlined workflows ensure that even users with minimal technical expertise can create professional-quality websites and content with ease.'
         },
         {
           icon: '💰️',
@@ -245,7 +240,16 @@ const defaultData = {
       },
       {
         "question": "Who can benefit from WebsiteLM?",
-        "answer": "WebsiteLM is ideal for website administrators, SEO professionals, content creators, marketers, and anyone looking to improve their website’s SEO performance."
+        "answer": {
+          "topContent": "WebsiteLM is ideal for",
+          "bottomContent": [
+            "Website administrators",
+            "SEO professionals",
+            "Content creators",
+            "Marketers",
+            "Anyone looking to improve their website’s SEO performance."
+          ]
+        }
       },
       {
         "question": "How does WebsiteLM help improve SEO?",
@@ -253,7 +257,21 @@ const defaultData = {
       },
       {
         "question": "What features does WebsiteLM offer?",
-        "answer": "WebsiteLM offers features like website analysis, knowledge base construction, help center generation, keyword and page planning, content generation, multi-language support, social media integration, data visualization, and support for internal and external link integration."
+        "answer": {
+          "topContent": "WebsiteLM offers features like",
+          "bottomContent": [
+            "Website Analysis: Analyzes your website’s SEO, structure, user experience, and more.",
+            "Knowledge Base Construction: Builds an AI-powered knowledge base using Retrieval-Augmented Generation (RAG) technology.",
+            "Help Center Generation: Automatically generates help center content based on the knowledge base.",
+            "Keyword and Page Planning: Analyzes keyword gaps between a user’s website and competitors.",
+            "Content Generation: Automatically creates SEO-optimized content based on the planned pages and content calendar.",
+            "Multi-Language Support: Automatically translates website content into multiple languages and optimizes each language for SEO.",
+            "Social Media Integration: Integrates with social media platforms to share content and drive traffic.",
+            "Data Visualization: Provides data visualizations and detailed reports on SEO performance, traffic, user behavior, and other key metrics.",
+            "Support for Internal and External Link Integration: Supports internal and external link integration to enhance content discoverability and help you reach a broader audience.",
+            "Internal and External Link Integration: Supports internal and external link integration to enhance content discoverability and help you reach a broader audience.",
+          ]
+        }
       },
       {
         "question": "Can I customize the content generated by WebsiteLM?",
@@ -277,7 +295,7 @@ const defaultData = {
       },
       {
         "question": "What kind of performance reports does WebsiteLM provide?",
-        "answer": "WebsiteLM offers data visualizations and detailed reports on SEO performance, traffic, user behavior, and other key metrics to help you track progress and make data-driven decisions."
+        "answer": "WebsiteLM integrates with Google Search Console to provide precise insights into indexing, rankings, and traffic tracking. With detailed data visualizations and reports, you can monitor performance effectively and make informed, data-driven decisions to optimize your strategy."
       },
       {
         "question": "How does WebsiteLM handle content maintenance?",
@@ -385,14 +403,22 @@ export default function HomePageClient({ initialData }) {
   return (
     <main className="flex-grow">
       <HeroSectionWithMultipleTexts data={mockData.HeroSectionWithMultipleTexts} />
-      <WhyChooseUsWithSixSmallBlocks data={mockData.WhyChooseUsWithSixSmallBlocks} />
-      <WhyChooseUsWithHugeBlocks data={mockData.WhyChooseUsWithHugeBlocks} />
+      <WhyChooseUsWithSmallBlocks data={mockData.WhyChooseUsWithSmallBlocks} />
+      <div id="features">
+        <WhyChooseUsWithHugeBlocks data={mockData.WhyChooseUsWithHugeBlocks} />
+      </div>
       <HowItWorksWithWorkflow data={mockData.HowItWorksWithWorkflow} />
-      <ProductBenefitsWithBlocks data={mockData.ProductBenefitsWithBlocks}/>
+      <div id="solutions">
+        <ProductBenefitsWithBlocks data={mockData.ProductBenefitsWithBlocks}/>
+      </div>
       <UserReviewsWithMovingCards data={mockData.UserReviewsWithMovingCards} />
       <FAQTwoColumnsWithSmallTitle data={mockData.FAQTwoColumnsWithSmallTitle} />
-      <PricingWithThreeCards data={mockData.PricingWithThreeCards} />
-      <CallToActionComplex data={mockData.CallToActionComplex} />
+      <div id="pricing">
+        <PricingWithThreeCards data={mockData.PricingWithThreeCards} />
+      </div>
+      <div id="resources">
+        <CallToActionComplex data={mockData.CallToActionComplex} />
+      </div>
     </main>
   );
 }

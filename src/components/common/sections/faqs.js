@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import fontStyles from '../../../styles/fontStyles';
+import FAQAnswer from '../components/FAQAnswer';
 
 const FAQs = ({ data }) => {
   return (
@@ -16,9 +17,9 @@ const FAQs = ({ data }) => {
               <h3 className={`${fontStyles.h3.fontSize} ${fontStyles.h3.fontWeight} ${fontStyles.h3.color} mb-3`}>
                 {faq.question}
               </h3>
-              <p className={`${fontStyles.paragraph.fontSize} ${fontStyles.paragraph.color}`}>
-                {faq.answer}
-              </p>
+              <div className={`${fontStyles.paragraph.fontSize} ${fontStyles.paragraph.color}`}>
+                <FAQAnswer answer={faq.answer} />
+              </div>
               <div className="mt-6 border-t border-gray-100" />
             </div>
           ))}
