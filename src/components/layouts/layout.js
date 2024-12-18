@@ -68,7 +68,7 @@ const generateSchemaMarkup = (article) => {
     dateModified: article.updateDate,
     publisher: {
       '@type': 'Organization',
-      name: 'Kreado'
+      name: 'WebsiteLM'
     }
   };
 };

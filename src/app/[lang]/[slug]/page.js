@@ -1,7 +1,7 @@
 import { getArticleBySlug, getArticles, getCustomRecommendations } from '../../../lib/api/index';
 import { notFound } from 'next/navigation';
 import { ClientWrapper } from '../../../components/layouts/client-wrapper';
-import KreadoaiLayout from '../../../components/layouts/layout';
+import Layout from '../../../components/layouts/layout';
 import Script from 'next/script'
 
 // 添加这个配置来启用动态路由
@@ -104,15 +104,15 @@ export default async function ArticlePage({ params: paramsPromise }) {
       },
       publisher: {
         '@type': 'Organization',
-        name: 'KreadoAI',
+        name: 'WebsiteLM',
         logo: {
           '@type': 'ImageObject',
-          url: 'https://kreadoai.com/logo.png'
+          url: 'https://websitelm.com/logo.png'
         }
       },
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': `https://kreadoai.com/${lang}/${slug}`
+        '@id': `https://websitelm.com/${lang}/${slug}`
       }
     };
 
@@ -123,7 +123,7 @@ export default async function ArticlePage({ params: paramsPromise }) {
         </Script>
         <ClientWrapper>
           <main className="flex-grow">
-            <KreadoaiLayout article={article} />
+            <Layout article={article} />
           </main>
         </ClientWrapper>
       </>
@@ -167,7 +167,7 @@ export async function generateMetadata({ params: paramsPromise }) {
         publishedTime: article.updatedAt,
         modifiedTime: article.updatedAt,  
         locale: lang,
-        siteName: 'KreadoAI',
+        siteName: 'WebsiteLM',
         images: [{
           url: article.sections[0]?.rightContent?.imageUrl,
           width: 1200,
@@ -180,17 +180,17 @@ export async function generateMetadata({ params: paramsPromise }) {
         title: article.title,
         description: article.description,
         images: article.coverImage,
-        creator: '@KreadoAI'
+        creator: '@WebsiteLM'
       },
       alternates: {  // Add language version associations
-        canonical: `https://kreadoai.com/${lang}/${slug}`,
+        canonical: `https://websitelm.com/${lang}/${slug}`,
         languages: {
-          'en': `https://kreadoai.com/en/${slug}`,
-          'zh': `https://kreadoai.com/zh/${slug}`,
+          'en': `https://websitelm.com/en/${slug}`,
+          'zh': `https://websitelm.com/zh/${slug}`,
           // Add other supported languages
         }
       },
-      metadataBase: new URL('https://kreadoai.com'),
+      metadataBase: new URL('https://websitelm.com'),
       authors: [{ name: article.author }],
       category: article.category
     };

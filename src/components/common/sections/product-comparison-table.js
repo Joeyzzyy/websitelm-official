@@ -264,10 +264,5 @@ const ProductComparisonTable = ({ data, author }) => {
       </div>
     </div>
   );
-};
-
-ProductComparisonTable.propTypes = {
-  author: PropTypes.oneOf(['HIXAI', 'JOGGAI', 'JohnsmithAI', 'KREADO'])
-};
-
+}; 
 export default ProductComparisonTable;

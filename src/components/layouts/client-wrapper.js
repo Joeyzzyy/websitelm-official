@@ -3,12 +3,12 @@
 import dynamic from 'next/dynamic';
 
 const Header = dynamic(
-  () => import('./header').then(mod => mod.KreadoaiHeader),
+  () => import('./header').then(mod => mod.WebsiteLMHeader),
   { ssr: false }
 );
 
 const Footer = dynamic(
-  () => import('./footer').then(mod => mod.KreadoaiFooter),
+  () => import('./footer').then(mod => mod.WebsiteLMFooter),
   { ssr: false }
 );
 

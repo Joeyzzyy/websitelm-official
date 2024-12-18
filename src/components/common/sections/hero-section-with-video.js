@@ -37,7 +37,7 @@ const HeroSectionWithVideo = ({ data }) => {
           
           <div className="mt-8">
             <CustomButton 
-              variant="KREADO" 
+              variant="WebsiteLM" 
               href={getButtonLink()}
               className="block mx-auto border-2 border-[#3374FF] text-[#3374FF] hover:bg-[#3374FF] hover:text-white font-medium px-6 md:px-8 rounded-md text-sm h-10 flex items-center gap-2 transition-colors duration-200"
             >
