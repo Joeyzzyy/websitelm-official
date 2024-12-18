@@ -2,8 +2,9 @@
 export const dynamic = 'force-static';
 
 export const metadata = {
-  title: 'WebsiteLM - The Best SEO Page Generator for Modern Era',
-  description: 'The Best SEO Page Generator for Modern Era',
+  title: 'WebsiteLM: AI Website Generator - AI-crafted Content That Delivers Results.',
+  description: 'WebsiteLM is your ultimate AI website builder. Effortlessly generate high-quality, SEO-optimized landing pages and blog posts tailored to your target audience. Our cutting-edge AI technology empowers you to build a robust knowledge base and create content that ranks, drives traffic, and converts visitors into customers.',
+  keywords: 'AI website generator, AI website builder, AI content generator, AI-powered content creation, SEO-optimized content, landing page generator, landing page builder, blog post generator, blog post builder, AI marketing tools, AI copywriting, AI content marketing, digital marketing tools, online marketing tools, AI technology, machine learning, natural language processing, content strategy, content marketing, SEO, SEM, PPC, social media marketing'
 };
 
 // 导入客户端主页组件
