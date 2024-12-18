@@ -13,9 +13,9 @@ import WhyChooseUsWithSixBlocks from '../common/sections/why-choose-us-with-six-
 import CallToAction from '../common/sections/call-to-action';
 import CallToActionWithImage from '../common/sections/call-to-action-with-image';
 import HowItWorksWithThreeBlocks from '../common/sections/how-it-works-with-three-blocks';
-import ProductBenefitsWithFourBlocks from '../common/sections/product-benefits-with-four-blocks';
+import ProductBenefitsWithFourBlocks from '../common/sections/product-benefits-with-blocks';
 import ProductBenefitsWithATable from '../common/sections/product-benefits-with-a-table';
-import WhyChooseUsWithTwoBlocks from '../common/sections/why-choose-us-with-two-huge-blocks';
+import WhyChooseUsWithTwoBlocks from '../common/sections/why-choose-us-with-huge-blocks';
 import HeroSectionWithVideo from '../common/sections/hero-section-with-video';
 import Faqs from '../common/sections/faqs';
 import FaqTwoColumnsWithSmallTitle from '../common/sections/faq-two-columns-with-small-title';

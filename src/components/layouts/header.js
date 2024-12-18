@@ -1,54 +1,83 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
 import { menuItems } from '@/locales/headerText';
 
-export const Navigation = ({ theme = 'light' }) => {
+export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname();
-  const [currentLang, setCurrentLang] = useState('en');
+  
+  const mainMenuItems = [
+    { key: 'features', label: 'Features' },
+    { key: 'solutions', label: 'Solutions' },
+    { key: 'resources', label: 'Resources' },
+    { key: 'pricing', label: 'Pricing' },
+  ];
 
-  useEffect(() => {
-    const pathParts = pathname.split('/');
-    const lang = pathParts[1] === 'zh' ? 'zh' : 'en';
-    setCurrentLang(lang);
-  }, [pathname]);
-
-  const currentMenuItems = menuItems[currentLang];
+  const actionItems = [
+    { key: 'login', label: 'Login' },
+    { key: 'book-demo', label: 'Book a Demo' },
+    { key: 'get-started', label: 'Get Started' },
+  ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow">
       <div className="max-w-[1450px] mx-auto px-6">
         <div className="flex justify-between h-[4.2rem]">
+          {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            {/* <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center">
               <Image
-                src=""
-                alt="WebsiteLM Logo"
+                src="/images/enterprise-logo.png"
+                alt="Logo"
                 width={110}
-                height={53}s
+                height={53}
                 className="h-9 w-auto"
                 quality={100}
                 priority
               />
-            </Link> */}
+            </Link>
           </div>
 
-          <div className="hidden md:flex items-center justify-center flex-1">
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center justify-between flex-1 pl-8">
+            {/* Main Menu Items */}
             <div className="flex space-x-8">
-              {currentMenuItems.map((item) => (
-                <span
-                key={item.key}
-                className="text-[15px] font-medium transition-all duration-300 flex items-center cursor-pointer"
-              >
-                {item.label}
-              </span>
+              {mainMenuItems.map((item) => (
+                <Link
+                  key={item.key}
+                  href={`/${item.key}`}
+                  className="text-[15px] font-medium hover:text-[#3374FF] transition-all duration-300 flex items-center"
+                >
+                  {item.label}
+                </Link>
               ))}
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex items-center space-x-6">
+              <Link
+                href="/login"
+                className="text-[15px] font-medium hover:text-[#3374FF] transition-all duration-300"
+              >
+                Login
+              </Link>
+              <Link
+                href="/book-demo"
+                className="text-[15px] font-medium hover:text-[#3374FF] transition-all duration-300"
+              >
+                Book a Demo
+              </Link>
+              <Link
+                href="/get-started"
+                className="text-[15px] font-medium text-white bg-[#3374FF] hover:bg-[#3374FF]/90 px-4 py-2 rounded-lg transition-all duration-300"
+              >
+                Get Started
+              </Link>
             </div>
           </div>
 
+          {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -72,6 +101,4 @@ export const Navigation = ({ theme = 'light' }) => {
   );
 };
 
-export const Header = ({ theme = 'light' }) => {
-  return <Navigation theme={theme} />;
-};
+export default Header;

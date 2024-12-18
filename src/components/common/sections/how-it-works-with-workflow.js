@@ -12,43 +12,36 @@ const HowItWorksWithWorkflow = ({ data, author }) => {
   };
   
   return (
-    <div className="bg-white py-12 md:py-16">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className={`${fontStyles.h2.fontSize} ${fontStyles.h2.fontWeight} ${fontStyles.h2.color}`}>
+    <div className="bg-white py-16 md:py-24">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="text-center mb-16 md:mb-24">
+          <div className="text-6xl mb-6">{topContent.icon}</div>
+          <h2 className={`${fontStyles.h2.fontSize} ${fontStyles.h2.fontWeight} ${fontStyles.h2.color} mb-4`}>
             {topContent.title}
           </h2>
+          <h3 className="text-xl text-gray-600 max-w-3xl mx-auto">{topContent.subTitle}</h3>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center md:items-start mb-12">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-12 md:gap-6">
           {bottomContent.map((block, index) => (
             <React.Fragment key={block.number}>
-              <div className="flex flex-col items-center text-center w-full md:w-[28%] mb-8 md:mb-0">
-                <div className="text-4xl md:text-5xl font-bold mb-4 text-[#3374FF]">
+              <div className="flex flex-col items-center text-center w-full md:w-[30%] p-6 rounded-lg hover:bg-gray-50 transition-colors">
+                <div className="text-5xl md:text-6xl font-bold mb-6 text-[#3374FF]">
                   {block.number}
                 </div>
-                <p className={`${fontStyles.paragraph.fontSize} ${fontStyles.paragraph.color} px-4`}>
+                <h4 className="text-xl font-semibold mb-3">{block.title}</h4>
+                <h5 className="text-base text-gray-600 mb-4">{block.subTitle}</h5>
+                <p className="text-base text-gray-700 leading-relaxed">
                   {block.content}
                 </p>
               </div>
-              
               {index < bottomContent.length - 1 && (
-                <div className="hidden md:block text-[#3374FF] text-3xl font-bold">
+                <div className="hidden md:block text-[#3374FF] text-4xl">
                   →
                 </div>
               )}
             </React.Fragment>
           ))}
-        </div>
-
-        <div className="text-center">
-          <CustomButton 
-            variant={author} 
-            href={getButtonLink()}
-            className="inline-flex items-center px-6 h-10 border-2 border-[#3374FF] text-[#3374FF] hover:bg-[#3374FF] hover:text-white text-sm font-medium rounded-md transition-colors duration-200 whitespace-nowrap"
-          >
-            {topContent.buttonText}
-          </CustomButton>
         </div>
       </div>
     </div>
