@@ -1,10 +1,10 @@
 import './globals.css';
 
 export const metadata = {
-  metadataBase: new URL('https://websitelm.com'),
+  metadataBase: new URL('https://www.websitelm.com'),
   alternates: {
     canonical: {
-      url: '/'
+      url: 'https://www.websitelm.com'
     },
   }
 };
@@ -15,7 +15,6 @@ export default function RootLayout({ children, keywords }) {
       <head>
         <meta name="keywords" content={keywords} />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://websitelm.com/" />
       </head>
       <body suppressHydrationWarning={true} style={{ overflowX: 'hidden' }}>
         {children}
