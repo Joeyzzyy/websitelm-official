@@ -57,6 +57,9 @@ const WhyChooseUsWithTwoHugeBlocks = ({ data, author }) => {
                 fill
                 className="object-cover rounded-lg border border-gray-100"
                 sizes="(max-width: 768px) 100vw, 50vw"
+                width={600}
+                height={300}
+                priority={index === 0}
               />
             </div>
           </div>
