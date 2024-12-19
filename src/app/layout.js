@@ -1,10 +1,10 @@
 import './globals.css';
 
 export const metadata = {
-  metadataBase: new URL('https://www.websitelm.com'),
+  metadataBase: new URL('https://websitelm.com'),
   alternates: {
     canonical: {
-      url: 'https://www.websitelm.com'
+      url: 'https://websitelm.com'
     },
   }
 };
