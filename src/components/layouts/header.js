@@ -76,27 +76,26 @@ export const Header = () => {
 
             {/* Action Buttons */}
             <div className="flex items-center space-x-6">
-              <Link
-                href="/login"
+              <a
+                href="https://app.websitelm.com"
                 className="text-[15px] font-medium hover:text-[#3374FF] transition-all duration-300"
-                onClick={handleRedirect}
               >
                 Login
-              </Link>
-              <Link
-                href="/book-demo"
+              </a>
+              <a
+                href="https://calendly.com/joey-techacc/30min"
                 className="text-[15px] font-medium hover:text-[#3374FF] transition-all duration-300"
-                onClick={(e) => e.preventDefault()}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Book a Demo
-              </Link>
-              <Link
-                href="/get-started"
+              </a>
+              <a
+                href="https://app.websitelm.com"
                 className="text-[15px] font-medium text-white bg-[#3374FF] hover:bg-[#3374FF]/90 px-4 py-2 rounded-lg transition-all duration-300"
-                onClick={handleRedirect}
               >
                 Get Started
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -148,37 +147,27 @@ export const Header = () => {
                 {/* 操作按钮区域 */}
                 <div className="space-y-3">
                   <div className="flex items-center space-x-4">
-                    <Link
-                      href="/login"
+                    <a
+                      href="https://app.websitelm.com"
                       className="text-[15px] font-medium text-gray-600 hover:text-[#3374FF] transition-all duration-300"
-                      onClick={(e) => {
-                        handleRedirect(e);
-                        setIsOpen(false);
-                      }}
                     >
                       Login
-                    </Link>
-                    <Link
-                      href="/book-demo"
+                    </a>
+                    <a
+                      href="https://calendly.com/joey-techacc/30min"
                       className="text-[15px] font-medium text-gray-600 hover:text-[#3374FF] transition-all duration-300"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setIsOpen(false);
-                      }}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Book a Demo
-                    </Link>
+                    </a>
                   </div>
-                  <Link
-                    href="/get-started"
+                  <a
+                    href="https://app.websitelm.com"
                     className="inline-flex items-center justify-center text-[15px] font-medium text-white bg-[#3374FF] hover:bg-[#3374FF]/90 px-5 py-2.5 rounded-lg transition-all duration-300"
-                    onClick={(e) => {
-                      handleRedirect(e);
-                      setIsOpen(false);
-                    }}
                   >
                     Get Started
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
