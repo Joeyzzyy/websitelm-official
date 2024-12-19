@@ -1,7 +1,6 @@
 import './globals.css'
-import { Metadata } from 'next';
 
-export const Metadata = {
+export const metadata = {
   metadataBase: new URL('https://websitelm.com'),
   alternates: {
     canonical: '/',
