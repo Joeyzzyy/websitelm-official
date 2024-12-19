@@ -32,7 +32,7 @@ export const Header = () => {
     { key: 'features', label: 'Features' },
     { key: 'solutions', label: 'Solutions' },
     { key: 'resources', label: 'Resources' },
-    { key: 'pricing', label: 'Pricing' },
+    // { key: 'pricing', label: 'Pricing' },
   ];
 
   const actionItems = [

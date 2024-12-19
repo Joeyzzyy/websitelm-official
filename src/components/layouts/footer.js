@@ -41,14 +41,14 @@ export const Footer = () => {
 
         <div className="border-t border-gray-800 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-            <div className="flex space-x-6">
+            {/* <div className="flex space-x-6">
               <FaXTwitter className="h-6 w-6 text-gray-300 hover:text-white cursor-pointer transition-colors duration-200" />
               <FaYoutube className="h-6 w-6 text-gray-300 hover:text-white cursor-pointer transition-colors duration-200" />
               <FaLinkedin className="h-6 w-6 text-gray-300 hover:text-white cursor-pointer transition-colors duration-200" />
               <FaDiscord className="h-6 w-6 text-gray-300 hover:text-white cursor-pointer transition-colors duration-200" />
             </div>
-            
-            <div className="flex-1 max-w-md mx-4">
+             */}
+            {/* <div className="flex-1 max-w-md mx-4">
               <h4 className="text-white text-center md:text-left mb-3 font-semibold">Stay Updated</h4>
               <p className="text-gray-400 text-sm mb-4 text-center md:text-left">
                 Subscribe to our newsletter for the latest updates and tips.
@@ -63,7 +63,7 @@ export const Footer = () => {
                   Subscribe
                 </button>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 

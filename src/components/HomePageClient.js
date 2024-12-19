@@ -413,9 +413,9 @@ export default function HomePageClient({ initialData }) {
       </div>
       <UserReviewsWithMovingCards data={mockData.UserReviewsWithMovingCards} />
       <FAQTwoColumnsWithSmallTitle data={mockData.FAQTwoColumnsWithSmallTitle} />
-      <div id="pricing">
+      {/* <div id="pricing">
         <PricingWithThreeCards data={mockData.PricingWithThreeCards} />
-      </div>
+      </div> */}
       <div id="resources">
         <CallToActionComplex data={mockData.CallToActionComplex} />
       </div>

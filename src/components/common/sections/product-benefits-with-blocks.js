@@ -1,13 +1,17 @@
 'use client';
 
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import CustomButton from './widget-custom_button';
 import buttonLinks from '../../ui/button/links';
 import fontStyles from '../../../styles/fontStyles';
 
 const ProductBenefitsWithFourBlocks = ({ data, author }) => {
-  const getButtonLink = () => {
-    return buttonLinks.workbench || '#';
+  const router = useRouter();
+
+  const handleRedirect = (e) => {
+    e.preventDefault();
+    router.push('https://app.websitelm.com');
   };
 
   const getModuleStyle = (index) => {
@@ -41,7 +45,7 @@ const ProductBenefitsWithFourBlocks = ({ data, author }) => {
               </p>
               <CustomButton 
                 variant={author} 
-                href={getButtonLink()}
+                onClick={handleRedirect}
                 className="inline-flex items-center px-6 py-2.5 border-2 border-[#3374FF] text-[#3374FF] hover:bg-[#3374FF] hover:text-white rounded-md transition-colors duration-200"
               >
                 {data.leftContent.buttonText}

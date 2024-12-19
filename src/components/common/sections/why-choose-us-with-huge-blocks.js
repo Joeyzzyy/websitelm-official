@@ -4,8 +4,16 @@ import CustomButton from './widget-custom_button';
 import fontStyles from '../../../styles/fontStyles';
 import buttonLinks from '../../ui/button/links';
 import Image from 'next/image';  // 添加这行导入
+import { useRouter } from 'next/navigation';  // 添加这行
 
 const WhyChooseUsWithTwoHugeBlocks = ({ data, author }) => {
+  const router = useRouter();  // 添加这行
+  
+  const handleRedirect = (e) => {  // 添加这个处理函数
+    e.preventDefault();
+    router.push('https://app.websitelm.com');
+  };
+
   const getButtonLink = () => {
     return buttonLinks.workbench || '#';
   };
@@ -41,7 +49,7 @@ const WhyChooseUsWithTwoHugeBlocks = ({ data, author }) => {
               <div>
                 <CustomButton 
                   variant={author} 
-                  href={getButtonLink()}
+                  onClick={handleRedirect}  // 修改这里：改用 onClick 而不是 href
                   className="inline-flex items-center px-6 h-10 border-2 border-[#3374FF] text-[#3374FF] hover:bg-[#3374FF] hover:text-white text-sm font-medium rounded-md transition-colors duration-200 whitespace-nowrap"
                 >
                   {content.buttonText}
@@ -57,8 +65,6 @@ const WhyChooseUsWithTwoHugeBlocks = ({ data, author }) => {
                 fill
                 className="object-cover rounded-lg border border-gray-100"
                 sizes="(max-width: 768px) 100vw, 50vw"
-                width={600}
-                height={300}
                 priority={index === 0}
               />
             </div>

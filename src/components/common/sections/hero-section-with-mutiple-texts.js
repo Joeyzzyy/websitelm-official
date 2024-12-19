@@ -3,10 +3,18 @@ import React from 'react';
 import CustomButton from './widget-custom_button';
 import buttonLinks from '../../ui/button/links';
 import fontStyles from '../../../styles/fontStyles';
+import { useRouter } from 'next/navigation';
 
 const HeroSectionWithMultipleTexts = ({ data }) => {
-  const getButtonLink = () => {
-    return buttonLinks.workbench || '#';
+  const router = useRouter();
+
+  const handleButtonClick = (type) => (e) => {
+    e.preventDefault();
+    if (type === 'demo') {
+      window.open('https://calendly.com/joey-techacc/30min', '_blank');
+    } else {
+      router.push('https://app.websitelm.com');
+    }
   };
 
   const renderTitleWithHighlight = (title) => {
@@ -43,7 +51,7 @@ const HeroSectionWithMultipleTexts = ({ data }) => {
           <div className="mt-8 flex justify-center gap-4">
             <CustomButton 
               variant="WebsiteLM" 
-              href={getButtonLink()}
+              onClick={handleButtonClick('demo')}
               className="border-2 border-[#3374FF] text-[#3374FF] hover:bg-[#3374FF] hover:text-white font-semibold 
               px-8 md:px-10 rounded-md text-base md:text-lg h-12 md:h-14 flex items-center gap-2 
               transition-all duration-200 hover:scale-105"
@@ -53,7 +61,7 @@ const HeroSectionWithMultipleTexts = ({ data }) => {
             
             <CustomButton 
               variant="WebsiteLM" 
-              href={getButtonLink()}
+              onClick={handleButtonClick('getStarted')}
               className="bg-[#3374FF] text-white hover:bg-[#2861E5] border-2 border-[#3374FF] font-semibold 
               px-8 md:px-10 rounded-md text-base md:text-lg h-12 md:h-14 flex items-center gap-2 
               transition-all duration-200 hover:scale-105"
