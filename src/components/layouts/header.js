@@ -2,13 +2,15 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
   
   const handleRedirect = (e) => {
     e.preventDefault();
-    window.location.href = 'https://app.websitelm.com';
+    router.push('https://app.websitelm.com');
   };
 
   const handleScroll = (sectionId, e) => {
@@ -77,7 +79,7 @@ export const Header = () => {
             {/* Action Buttons */}
             <div className="flex items-center space-x-6">
               <a
-                href="https://app.websitelm.com"
+                onClick={handleRedirect}
                 className="text-[15px] font-medium hover:text-[#3374FF] transition-all duration-300"
               >
                 Login
@@ -91,7 +93,7 @@ export const Header = () => {
                 Book a Demo
               </a>
               <a
-                href="https://app.websitelm.com"
+                onClick={handleRedirect}
                 className="text-[15px] font-medium text-white bg-[#3374FF] hover:bg-[#3374FF]/90 px-4 py-2 rounded-lg transition-all duration-300"
               >
                 Get Started
@@ -148,7 +150,7 @@ export const Header = () => {
                 <div className="space-y-3">
                   <div className="flex items-center space-x-4">
                     <a
-                      href="https://app.websitelm.com"
+                      onClick={handleRedirect}
                       className="text-[15px] font-medium text-gray-600 hover:text-[#3374FF] transition-all duration-300"
                     >
                       Login

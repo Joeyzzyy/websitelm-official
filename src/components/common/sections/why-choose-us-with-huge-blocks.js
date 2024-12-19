@@ -3,6 +3,7 @@ import React from 'react';
 import CustomButton from './widget-custom_button';
 import fontStyles from '../../../styles/fontStyles';
 import buttonLinks from '../../ui/button/links';
+import Image from 'next/image';  // 添加这行导入
 
 const WhyChooseUsWithTwoHugeBlocks = ({ data, author }) => {
   const getButtonLink = () => {
@@ -49,11 +50,13 @@ const WhyChooseUsWithTwoHugeBlocks = ({ data, author }) => {
             </div>
 
             {/* 图片 */}
-            <div className="w-full md:w-1/2">
-              <img 
+            <div className="w-full md:w-1/2 relative h-[300px]">
+              <Image 
                 src={content.imageUrl}
                 alt={content.imageAlt}
-                className="w-full h-full object-cover rounded-lg border border-gray-100 max-h-[300px]"
+                fill
+                className="object-cover rounded-lg border border-gray-100"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>

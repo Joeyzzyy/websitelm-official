@@ -1,4 +1,12 @@
 import './globals.css'
+import { Metadata } from 'next';
+
+export const Metadata = {
+  metadataBase: new URL('https://websitelm.com'),
+  alternates: {
+    canonical: '/',
+  }
+};
 
 export default function RootLayout({ children, keywords, robots }) {
   return (
