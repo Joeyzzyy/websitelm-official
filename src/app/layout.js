@@ -3,7 +3,9 @@ import './globals.css'
 export const metadata = {
   metadataBase: new URL('https://websitelm.com'),
   alternates: {
-    canonical: '/',
+    canonical: {
+      url: '/'
+    },
   }
 };
 

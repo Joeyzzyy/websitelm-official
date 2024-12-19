@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 const UserReviewsWithMovingCards = ({ data }) => {
   const title = data.title;
@@ -60,10 +61,12 @@ const UserReviewsWithMovingCards = ({ data }) => {
                   </div>
 
                   <div className="flex items-center mb-4">
-                    <img 
+                    <Image 
                       src={review.avatarUrl}
                       alt={review.avatarAlt}
-                      className="w-12 h-12 rounded-full object-contain p-1"
+                      width={48}
+                      height={48}
+                      className="rounded-full object-contain p-1"
                     />
                     <div className="ml-4">
                       <h3 className="text-gray-800 font-medium">{review.name}</h3>
