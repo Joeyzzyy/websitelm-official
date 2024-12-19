@@ -1,0 +1,11 @@
+# 全局规则
+User-agent: *
+
+# 允许访问的路径
+Allow: /
+
+# 爬虫抓取延迟（可选）
+Crawl-delay: 10
+
+# 网站地图
+Sitemap: https://websitelm.com/sitemap.xml 
